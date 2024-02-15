@@ -1,4 +1,4 @@
-# Clickforpoints
+# Pebbles: a Clicker Game
 A stage-based clicker game.
 
 ### members
