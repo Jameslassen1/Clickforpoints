@@ -1,10 +1,10 @@
 # Clickforpoints
-A stage based clicker game.
+A stage-based clicker game.
 
 ### members
-*James Lassen - group leader/coder
-*Cannon Unguren - coder
-*Ethan Stoffer - media and researcher
+* James Lassen - group leader/coder
+* Cannon Unguren - coder
+* Ethan Stoffer - media and researcher
 
 ### project objective
 
