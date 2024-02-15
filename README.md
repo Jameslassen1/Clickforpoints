@@ -3,9 +3,9 @@ A stage based clicker game.
 
 ### members
 *James Lassen - group leader/coder
-*Cannon Ungrin - coder
+*Cannon Unguren - coder
 *Ethan Stoffer - media and researcher
 
 ### project objective
 
-### UI and Logic Planing
+### UI and Logic Planning
