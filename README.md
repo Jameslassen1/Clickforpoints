@@ -9,3 +9,6 @@ A stage-based clicker game.
 ### project objective
 
 ### UI and Logic Planning
+![Calculator]()
+![Calculator]()
+![Calculator]()
