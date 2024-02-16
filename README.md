@@ -10,5 +10,5 @@ A stage-based clicker game.
 
 ### UI and Logic Planning
 ![Calculator](https://github.com/Jameslassen1/Clickforpoints/blob/main/images/IMG_20240215_173241.jpg?raw=true)
-![Calculator]()
+![Calculator](https://github.com/Jameslassen1/Clickforpoints/blob/main/images/IMG_20240215_173256.jpg?raw=true)
 ![Calculator]()
