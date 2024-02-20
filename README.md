@@ -1,13 +1,13 @@
 # Pebbles: a Clicker Game
 A stage-based clicker game.
 
-### members
+### Members
 * James Lassen - group leader/coder
 * Cannon Unguren - coder
 * Ethan Stoffer - media and researcher
 
-### project objective
-the goal of this project is to create a game with buttons that can be pressed to increase the pebbles that you can get per second. Animation will be another thing that we want to achieve. 
+### Project Objective
+The goal of this project is to create a game with buttons in the form of celestial objects and upgrades that can be pressed to increase the pebbles (money) that you can get per second. Animation is another thing that we will attempt to achieve. 
 
 ### UI and Logic Planning
 ![start](https://github.com/Jameslassen1/Clickforpoints/blob/main/images/IMG_20240215_173241.jpg?raw=true)
