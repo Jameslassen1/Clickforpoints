@@ -14,3 +14,5 @@ the goal of this project is to create a game with buttons that can be pressed to
 ![gameplay](https://github.com/Jameslassen1/Clickforpoints/blob/main/images/IMG_20240215_173256.jpg?raw=true)
 ![win](https://github.com/Jameslassen1/Clickforpoints/blob/main/images/IMG_20240215_173306.jpg?raw=true)
 ![planthing](https://github.com/Jameslassen1/Clickforpoints/blob/main/images/FIsh%20tank.png?raw=true)
+### Class Diagram
+![classdiagram](https://github.com/Jameslassen1/Clickforpoints/blob/main/images/Fish%20Tank%202.png)
