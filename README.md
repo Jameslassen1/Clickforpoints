@@ -15,3 +15,6 @@ The goal of this project is to create a game with buttons in the form of celesti
 ![win](https://github.com/Jameslassen1/Clickforpoints/blob/main/images/IMG_20240215_173306.jpg?raw=true)
 ### Class Diagram
 ![classdiagram](https://github.com/Jameslassen1/Clickforpoints/blob/main/images/Fish%20Tank%203.png)
+### Sprites
+#### Planet Sprite
+![planet](https://piskel-imgstore-b.appspot.com/img/d1e34102-d1a4-11ee-a67d-6190bbd18d81.gif)
