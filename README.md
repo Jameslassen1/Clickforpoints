@@ -1,5 +1,5 @@
 # Pebbles: a Clicker Game
-A stage-based clicker game.
+A stage-based clicker game. where you progress through levels to increase how many points you can have and your goal is to get your fishie friend to live in a massive fish boul, but you need to fill the fish boul with pebbles for your friand to be happy with his new home.
 
 ### Members
 * James Lassen - group leader/coder
