@@ -19,4 +19,4 @@ The goal of this project is to create a game with buttons in the form of celesti
 #### Planet Sprite
 ![planet](https://github.com/Jameslassen1/Clickforpoints/blob/main/images/d1e34102-d1a4-11ee-a67d-6190bbd18d81.gif)
 #### Asteroid Sprite
-![asteroid](https://github.com/Jameslassen1/Clickforpoints/blob/main/images/New%20Piskel.gif)
+![asteroid](https://github.com/Jameslassen1/Clickforpoints/blob/main/images/%20Fixedasteroid(usethisone).gif?raw=true)
