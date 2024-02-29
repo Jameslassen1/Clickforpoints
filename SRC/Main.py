@@ -1,5 +1,4 @@
 import pygame
-<<<<<<< HEAD
 from Button import Button
 
 score = 0
@@ -10,10 +9,6 @@ def function1():
 
 def function2():
     print("Button 2 clicked")
-=======
-import sys
-from Buttons import Button
->>>>>>> aa9860a63ac591975e96971c4e226c5c2c4c09d5
 
 pygame.init()
 screen = pygame.display.set_mode((400, 200))
@@ -40,3 +35,4 @@ while running:
     clock.tick(60)
 
 pygame.quit()
+
