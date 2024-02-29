@@ -1,52 +1,42 @@
 import pygame
+<<<<<<< HEAD
+from Button import Button
+
+score = 0
+
+def function1():
+  score= score+1
+    print("Button 1 clicked")
+
+def function2():
+    print("Button 2 clicked")
+=======
 import sys
 from Buttons import Button
+>>>>>>> aa9860a63ac591975e96971c4e226c5c2c4c09d5
 
 pygame.init()
-res = (750, 500)
-screen = pygame.display.set_mode(res)
+screen = pygame.display.set_mode((400, 200))
+clock = pygame.time.Clock()
 
-b1 = Button()
-b1.xpos = 20
-b1.ypos = 20
-b1.wid = 100
-b1.hei = 50
-b1.bLable = "Button 1"
-b1.r = 0
-b1.g = 255
-b1.b = 0
+font = pygame.font.Font(None, 36)
 
-for ev in pygame.event.get():
-  if ev.type == pygame.QUIT:
-        pygame.quit()
+button1 = Button(50, 50, 150, 50, (0, 255, 0), "Button 1", font, function1)
+button2 = Button(200, 50, 150, 50, (0, 0, 255), "Button 2", font, function2)
 
-      #checks if a mouse is clicked
-  if ev.type == pygame.MOUSEBUTTONDOWN:
+running = True
+while running:
+    screen.fill((255, 255, 255))
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        button1.handle_event(event)
+        button2.handle_event(event)
 
-    if width / 2 <= mouse[0] <= width / 2 + 140 and height / 2 <= mouse[
-            1] <= height / 2 + 40:
-          score = score + 1
+    button1.draw(screen)
+    button2.draw(screen)
 
-    # fills the screen with a color
-    screen.fill((60, 25, 60))
+    pygame.display.flip()
+    clock.tick(60)
 
-    # stores the (x,y) coordinates into
-    # the variable as a tuple
-    mouse = pygame.mouse.get_pos()
-
-
-    # if mouse is hovered on a button it
-    # changes to lighter shade
-    if width / 2 <= mouse[0] <= width / 2 + 140 and height / 2 <= mouse[
-        1] <= height / 2 + 40:
-      pygame.draw.rect(screen, color_light, [width / 2, height / 2, 140, 40])
-
-    else:
-      pygame.draw.rect(screen, color_dark, [width / 2, height / 2, 140, 40])
-
-    # superimposing the text onto our button
-    screen.blit(text, (width / 2 + 39, height / 2 + 9))
-    screen.blit(smallfont.render('pebbles: ' + str(score), True, color),
-                (20, 10))
-    # updates the frames of the game
-    pygame.display.update()
+pygame.quit()
