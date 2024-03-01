@@ -7,9 +7,13 @@ class Button:
         self.text = text
         self.font = font
         self.function = function
+        #self.fileN =  "temprock.gif"
+
+    
 
     def draw(self, screen):
         pygame.draw.rect(screen, self.color, self.rect)
+        #asurf = pygame.image.load(os.path.join('data', 'bla.png'))
         font_surface = self.font.render(self.text, True, (0, 0, 0))
         font_rect = font_surface.get_rect(center=self.rect.center)
         screen.blit(font_surface, font_rect)
