@@ -5,7 +5,7 @@ class Miner:
         self.name = name
         self.cost = cost
         self.power = power
-        self,amount = amount
+        self.amount = amount
     def __str__(self):
      return f"Miner(name ='{self.name}', cost={self.cost}, power={self.power} amount={self.amount})"
       
