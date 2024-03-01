@@ -1,6 +1,7 @@
 import pygame
 class Miner:
     def __init__(self,name,cost,power,buy):
+        self.name = name
         self.cost = cost
         self.power = power
         self.buy = buy
