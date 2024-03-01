@@ -1,12 +1,13 @@
 import pygame
 
 class Button:
-    def __init__(self, x, y, width, height, color, text, font, function=None):
+    def __init__(self, x, y, width, height, color, text, font, function, image):
         self.rect = pygame.Rect(x, y, width, height)
         self.color = color
         self.text = text
         self.font = font
         self.function = function
+        sel.image = image
         
 
     def draw(self, screen):
