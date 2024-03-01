@@ -4,6 +4,7 @@ from miner import Miner
 Miner.power =0
 score = 0
 Miner1 = Miner("Miner",10,1)
+
 def function1():
   global score
   score += 1
@@ -18,10 +19,10 @@ def function2():
 pygame.init()
 screen = pygame.display.set_mode((600, 600))
 clock = pygame.time.Clock()
-
 font = pygame.font.Font(None, 36)
 
-button1 = Button(200, 200, 150, 50, (150,150,150), "rock", font, function1)
+
+button1 = Button(200, 200, 150, 50, (150,150,150), "rock",  font, function1)
 button2 = Button(400,20, 150, 50, (0, 0, 255), "miner 1", font, function2)
 
 running = True
