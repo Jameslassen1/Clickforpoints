@@ -1,8 +1,9 @@
 import pygame
 from Button import Button
-
+from miner import Miner
+Miner.power =0
 score = 0
-
+Miner1 = Miner("Miner",10,1)
 def function1():
   global score
   score += 1
@@ -10,6 +11,8 @@ def function1():
 
 
 def function2():
+  Miner1.power += 1
+  print("Miner1 power:",Miner1.power)
   print("Button 2 clicked")
 
 pygame.init()
