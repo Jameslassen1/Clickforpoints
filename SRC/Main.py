@@ -19,7 +19,7 @@ clock = pygame.time.Clock()
 font = pygame.font.Font(None, 36)
 
 button1 = Button(200, 200, 150, 50, (150,150,150), "rock", font, function1)
-button2 = Button(400, 50, 150, 50, (0, 0, 255), "miner 1", font, function2)
+button2 = Button(400,20, 150, 50, (0, 0, 255), "miner 1", font, function2)
 
 running = True
 while running:
