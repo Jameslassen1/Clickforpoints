@@ -1,9 +1,10 @@
 import pygame
 from Button import Button
 from miner import Miner
+from ImageButton import ImageButton
 Miner.power =0
 score = 0
-Miner1 = Miner("Miner",10,1)
+Miner1 = Miner("Miner",10,0,0)
 
 def function1():
   global score
@@ -13,6 +14,7 @@ def function1():
 
 def function2():
   Miner1.power += 1
+  Miner1.amount += 1
   print("Miner1 power:",Miner1.power)
   print("Button 2 clicked")
 
@@ -21,8 +23,9 @@ screen = pygame.display.set_mode((600, 600))
 clock = pygame.time.Clock()
 font = pygame.font.Font(None, 36)
 
+button1_image = pygame.image.load("images/temprock.gif")
 
-button1 = Button(200, 200, 150, 50, (150,150,150), "rock",  font, function1)
+button1 = ImageButton(280,280,button1_image, function1)
 button2 = Button(400,20, 150, 50, (0, 0, 255), "miner 1", font, function2)
 
 running = True
