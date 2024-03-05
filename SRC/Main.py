@@ -33,6 +33,8 @@ while play == False:
   for event in pygame.event.get():
     if event.type == pygame.MOUSEBUTTONDOWN:
       play = True
+
+      
 button1_image = pygame.image.load("images/rock.png")
 MinerImage = pygame.image.load("images/EthanViking_Miner.png")
 
