@@ -26,13 +26,25 @@ pygame.init()
 screen = pygame.display.set_mode((600, 600))
 clock = pygame.time.Clock()
 font = pygame.font.Font(None, 36)
-while play == False:
-  start_text = font.render("Welcome to Pebbles.", True, (0,0,0))
-  screen.blit(start_text, (300 + 39, 300 + 9))
-  pygame.display.update()
-  for event in pygame.event.get():
-    if event.type == pygame.MOUSEBUTTONDOWN:
-      play = True
+while not play:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            play = True
+            
+    screen.fill((255, 255, 255))
+
+    welcome = font.render("Welcome to Pebbles", True, (0, 0, 0))
+    screen.blit(welcome, (150, 250))
+
+    begin_text = font.render("Click anywhere to start", True, (0, 0, 0))
+    screen.blit(begin_text, (150, 300))
+
+    pygame.display.flip()
+
+    # Check for mouse click to start the game
+    for event in pygame.event.get():
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+            play = True
 
       
 button1_image = pygame.image.load("images/rock.png")
