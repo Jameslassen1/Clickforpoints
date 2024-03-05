@@ -7,7 +7,7 @@ class Button:
         self.text = text
         self.font = font
         self.function = function
-        sel.image = image
+        self.image = image
         
 
     def draw(self, screen):
