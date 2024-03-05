@@ -1,5 +1,5 @@
 # Pebbles: a Clicker Game
-A stage-based clicker game. where you progress through levels to increase how many points you can have and your goal is to get your fishie friend to live in a massive fish boul, but you need to fill the fish boul with pebbles for your friand to be happy with his new home.
+A stage-based clicker game. where you progress through levels to increase how many points you can have and your goal is to get your fishie friend to live in a massive fish boul, but you need to fill the fish bowl with pebbles for your friend to be happy with his new home.
 
 ### Members
 * James Lassen - group leader/coder
@@ -19,4 +19,4 @@ The goal of this project is to create a game with buttons in the form of celesti
 #### Planet Sprite
 ![planet](https://github.com/Jameslassen1/Clickforpoints/blob/main/SRC/images/PNGPlanet.png)
 #### Asteroid Sprite
-![asteroid](https://github.com/Jameslassen1/Clickforpoints/blob/main/images/%20Fixedasteroid(usethisone).gif?raw=true)
+![asteroid](https://github.com/Jameslassen1/Clickforpoints/blob/main/SRC/images/PNGAsteroid.png)
