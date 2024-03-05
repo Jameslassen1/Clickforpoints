@@ -19,6 +19,6 @@ The goal of this project is to create a game with buttons in the form of celesti
 #### Planet Sprite
 ![planet](https://github.com/Jameslassen1/Clickforpoints/blob/main/SRC/images/PNGPlanet.png)
 #### Asteroid Sprite
-![asteroid](https://github.com/Jameslassen1/Clickforpoints/blob/main/SRC/images/PNGAsteroid.png)
+![asteroid](https://github.com/Jameslassen1/Clickforpoints/blob/main/SRC/images/EthanPNGAsteroid.png)
 #### TNT Sprite
 ![TNT](https://github.com/Jameslassen1/Clickforpoints/blob/main/SRC/images/EthanTNT-1.png)
