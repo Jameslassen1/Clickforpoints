@@ -25,8 +25,8 @@ font = pygame.font.Font(None, 36)
 
 button1_image = pygame.image.load("images/temprock.gif")
 
-button1 = ImageButton(50,400,button1_image, function1)
-button2 = Button(400,20, 150, 50, (0, 0, 255), "miner 1", font, function2)
+button1 = ImageButton(300,300, button1_image, function1)
+#button2 = Button(400,20, 150, 50, (0, 0, 255), "miner 1", font, function2)
 
 running = True
 while running:
@@ -35,10 +35,10 @@ while running:
         if event.type == pygame.QUIT:
             running = False
         button1.handle_event(event)
-        button2.handle_event(event)
+        #button2.handle_event(event)
 
     button1.draw(screen)
-    button2.draw(screen)
+    #button2.draw(screen)
 
     pygame.display.flip()
     clock.tick(60)
