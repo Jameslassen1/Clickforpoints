@@ -4,7 +4,7 @@ A stage-based clicker game. where you progress through levels to increase how ma
 ### Members
 * James Lassen - group leader/coder
 * Cannon Unguren - coder
-* Ethan Stoffer - media and researcher
+* Ethan Stoffer - Sprite maker, media, and researcher
 
 ### Project Objective
 The goal of this project is to create a game with buttons in the form of celestial objects and upgrades that can be pressed to increase the pebbles (money) that you can get per second. Animation is another thing that we will attempt to achieve. 
