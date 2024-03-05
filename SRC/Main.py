@@ -24,7 +24,7 @@ screen = pygame.display.set_mode((600, 600))
 clock = pygame.time.Clock()
 font = pygame.font.Font(None, 36)
 
-button1_image = pygame.image.load("images/temprock.gif")
+button1_image = pygame.image.load("images/rock.png")
 MinerImage = pygame.image.load("images/Viking_Miner.png")
 
 button1 = ImageButton(300,300, button1_image, function1)
