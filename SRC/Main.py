@@ -1,3 +1,5 @@
+# James L and Cannon U
+
 import pygame
 from Button import Button
 from miner import Miner
@@ -25,7 +27,7 @@ clock = pygame.time.Clock()
 font = pygame.font.Font(None, 36)
 
 button1_image = pygame.image.load("images/rock.png")
-MinerImage = pygame.image.load("images/Viking_Miner.png")
+MinerImage = pygame.image.load("images/EthanViking_Miner.png")
 
 button1 = ImageButton(300,300, button1_image, function1)
 button2 = Button(400,20, 150, 50, (0, 0, 255), "miner 1", font, function2, MinerImage)
