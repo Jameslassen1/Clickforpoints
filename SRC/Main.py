@@ -4,11 +4,13 @@ import pygame
 from Button import Button
 from miner import Miner
 from ImageButton import ImageButton
-Miner.power =0
+
 score = 0
 Miner1 = Miner("Miner",10,0,0)
-TNT = Miner("TNT",100,0,0)
+Tnt = Miner("TNT",100,0,0)
 play = False
+
+
 def function1():
   global score
   score += 1
@@ -24,10 +26,10 @@ def function2():
   print("Miner1 cost:",Miner1.cost)
 
 def function3():
-  TNT.power += 10
-  TNT.amount += 1
-  print("TNT power:",TNT.power)
-  print("TNT Amount:", TNT.amount)
+  Tnt.power += 10
+  Tnt.amount += 1
+  print("TNT power:",Tnt.power)
+  print("TNT Amount:", Tnt.amount)
 
 pygame.init()
 screen = pygame.display.set_mode((600, 600))
