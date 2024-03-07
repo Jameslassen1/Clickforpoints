@@ -8,28 +8,40 @@ from ImageButton import ImageButton
 score = 0
 Miner1 = Miner("Miner",10,0,0)
 Tnt = Miner("TNT",100,0,0)
+SDrill = Miner("Stone Drill", 1000,0,0)
 play = False
 
 
-def function1():
+def pebbleclick():
   global score
   score += 1
   print(score)
 
 
-def function2():
+def function1():
   Miner1.power += 1
   Miner1.amount += 1
-  Miner1.cost = round(10*(1.25) ** Miner1.amount)
+  Miner1.cost = round(10*((1.25) ** Miner1.amount))
   print("Miner1 power:",Miner1.power)
   print("Miner1 Amount:", Miner1.amount)
   print("Miner1 cost:",Miner1.cost)
 
+def function2():
+  Tnt.power += 10
+  Tnt.amount += 1
+  Tnt.cost = round(100*((1.25) ** Tnt.amount))
+  print("TNT power:",Tnt.power)
+  print("TNT Amount:", Tnt.amount)
+  print("TNT cost:",Tnt.cost)
+
+
 def function3():
   Tnt.power += 10
   Tnt.amount += 1
+  Tnt.cost = round(100*((1.25) ** Tnt.amount))
   print("TNT power:",Tnt.power)
   print("TNT Amount:", Tnt.amount)
+  print("TNT cost:",Tnt.cost)
 
 pygame.init()
 screen = pygame.display.set_mode((600, 600))
@@ -56,13 +68,14 @@ while not play:
             play = True
 
       
-button1_image = pygame.image.load("images/rock.png")
+pebblebutton1_image = pygame.image.load("images/rock.png")
 MinerImage = pygame.image.load("images/EthanViking_Miner.png")
 TNT = pygame.image.load("images/EthanTNT-1.png")
 
-button1 = ImageButton(100,300, button1_image, function1)
-button2 = Button(400,20, 200, 90, (0, 0, 255), "Miner", font, function2, MinerImage)
-button3 = Button(400,140, 200, 90, (0, 0, 255), "TNT", font, function3, TNT)
+pebblebutton1 = ImageButton(100,300, pebblebutton1_image, pebbleclick)
+button1 = Button(400,20, 200, 90, (0, 0, 255), "Miner", font, function1, MinerImage)
+button2 = Button(400,140, 200, 90, (0, 0, 255), "TNT", font, function2, TNT)
+button3 = Button(400,140, 200, 90, (0, 0, 255), "TNT", font, function2, TNT)
 
 
 while play:
@@ -70,10 +83,12 @@ while play:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             play = False
+        pebblebutton1.handle_event(event)
         button1.handle_event(event)
         button2.handle_event(event)
         button3.handle_event(event)
 
+    pebblebutton1.draw(screen)
     button1.draw(screen)
     button2.draw(screen)
     button3.draw(screen)
