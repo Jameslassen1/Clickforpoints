@@ -68,7 +68,7 @@ while not play:
             play = True
 
       
-pebblebutton1_image = pygame.image.load("images/rock.png")
+pebblebutton1_image = pygame.image.load("images/EthanRock.png")
 MinerImage = pygame.image.load("images/EthanViking_Miner.png")
 TNT = pygame.image.load("images/EthanTNT-1.png")
 
