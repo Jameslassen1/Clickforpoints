@@ -59,8 +59,8 @@ MinerImage = pygame.image.load("images/EthanViking_Miner.png")
 TNT = pygame.image.load("images/EthanTNT-1.png")
 
 button1 = ImageButton(100,300, button1_image, function1)
-button2 = Button(400,20, 150, 50, (0, 0, 255), "Miner", font, function2, MinerImage)
-button3 = Button(400,80, 150, 50, (0, 0, 255), "TNT", font, function3, TNT)
+button2 = Button(400,20, 200, 90, (0, 0, 255), "Miner", font, function2, MinerImage)
+button3 = Button(400,140, 200, 90, (0, 0, 255), "TNT", font, function3, TNT)
 
 
 while play:
