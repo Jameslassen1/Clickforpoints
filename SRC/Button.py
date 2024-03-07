@@ -11,17 +11,16 @@ class Button:
         self.text = text
         self.font = font
         self.function = function
-        self.image = image
+        self.image = pygame.image.load(image_path)
         
 
     def draw(self, screen):
         pygame.draw.rect(screen, self.color, self.rect)
-        #if self.image:
-            # If an image is provided, blit it onto the button
-            #surface.blit(self.image, (self.rect.x, self.rect.y))
         font_surface = self.font.render(self.text, True, (0, 0, 0))
         font_rect = font_surface.get_rect(center=self.rect.center)
         screen.blit(font_surface, font_rect)
+        if self.image:
+            screen.blit(self.image, self.rect.topleft)
 
     def is_clicked(self, pos):
         return self.rect.collidepoint(pos)
