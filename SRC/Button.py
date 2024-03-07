@@ -19,6 +19,8 @@ class Button:
         font_surface = self.font.render(self.text, True, (0, 0, 0))
         font_rect = font_surface.get_rect(center=self.rect.center)
         screen.blit(font_surface, font_rect)
+        if self.image:
+            screen.blit(self.image, self.rect.topleft)
 
     def is_clicked(self, pos):
         return self.rect.collidepoint(pos)
