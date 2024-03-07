@@ -7,6 +7,7 @@ from ImageButton import ImageButton
 Miner.power =0
 score = 0
 Miner1 = Miner("Miner",10,0,0)
+TNT = Miner("TNT",100,0,0)
 play = False
 def function1():
   global score
@@ -17,10 +18,18 @@ def function1():
 def function2():
   Miner1.power += 1
   Miner1.amount += 1
+  Miner1.cost = round(10*(1.25) ** Miner1.amount)
   print("Miner1 power:",Miner1.power)
   print("Miner1 Amount:", Miner1.amount)
   print("Button 2 clicked")
+  print("Miner1 cost:",Miner1.cost)
 
+def function3():
+  TNT.power += 10
+  TNT.amount += 1
+  print("TNT power:",TNT.power)
+  print("TNT Amount:", TNT.amount)
+  print("Button 3 clicked")
 
 pygame.init()
 screen = pygame.display.set_mode((600, 600))
@@ -51,7 +60,8 @@ button1_image = pygame.image.load("images/rock.png")
 MinerImage = pygame.image.load("images/EthanViking_Miner.png")
 
 button1 = ImageButton(300,300, button1_image, function1)
-button2 = Button(400,20, 150, 50, (0, 0, 255), "miner 1", font, function2, MinerImage)
+button2 = Button(400,20, 150, 50, (0, 0, 255), "Miner", font, function2, MinerImage)
+button3 = Button(400,80, 150, 50, (0, 0, 255), "TNT", font, function3, MinerImage)
 
 
 while play:
@@ -61,9 +71,11 @@ while play:
             play = False
         button1.handle_event(event)
         button2.handle_event(event)
+        button3.handle_event(event)
 
     button1.draw(screen)
     button2.draw(screen)
+    button3.draw(screen)
 
     pygame.display.flip()
     clock.tick(60)
