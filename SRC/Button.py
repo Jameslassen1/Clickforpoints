@@ -5,13 +5,13 @@ import sys
 
 class Button:
     #setting the variable for the button position size color and word on the button
-    def __init__(self, x, y, width, height, color, text, font, function, image):
+    def __init__(self, x, y, width, height, color, text, font, function, image=None):
         self.rect = pygame.Rect(x, y, width, height)
         self.color = color
         self.text = text
         self.font = font
         self.function = function
-        self.image = pygame.image.load(image_path)
+        self.image = image
         
 
     def draw(self, screen):

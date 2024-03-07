@@ -21,7 +21,6 @@ def function2():
   Miner1.cost = round(10*(1.25) ** Miner1.amount)
   print("Miner1 power:",Miner1.power)
   print("Miner1 Amount:", Miner1.amount)
-  print("Button 2 clicked")
   print("Miner1 cost:",Miner1.cost)
 
 def function3():
@@ -29,7 +28,6 @@ def function3():
   TNT.amount += 1
   print("TNT power:",TNT.power)
   print("TNT Amount:", TNT.amount)
-  print("Button 3 clicked")
 
 pygame.init()
 screen = pygame.display.set_mode((600, 600))
@@ -58,10 +56,11 @@ while not play:
       
 button1_image = pygame.image.load("images/rock.png")
 MinerImage = pygame.image.load("images/EthanViking_Miner.png")
+TNT = pygame.image.load("images/EthanTNT-1.png")
 
-button1 = ImageButton(300,300, button1_image, function1)
+button1 = ImageButton(100,300, button1_image, function1)
 button2 = Button(400,20, 150, 50, (0, 0, 255), "Miner", font, function2, MinerImage)
-button3 = Button(400,80, 150, 50, (0, 0, 255), "TNT", font, function3, MinerImage)
+button3 = Button(400,80, 150, 50, (0, 0, 255), "TNT", font, function3, TNT)
 
 
 while play:
