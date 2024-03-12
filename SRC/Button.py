@@ -16,11 +16,22 @@ class Button:
 
     def draw(self, screen):
         pygame.draw.rect(screen, self.color, self.rect)
+
+        max_text_width = self.rect.width * 0.8  # 80% of button width
+        font_size = self.font.size(self.text)
+        while font_size[0] > max_text_width:
+            self.font = pygame.font.Font(None, self.font.get_height() - 1)
+            font_size = self.font.size(self.text)
+
+
         font_surface = self.font.render(self.text, True, (0, 0, 0))
-        font_rect = font_surface.get_rect(center=self.rect.center)
+        font_rect = font_surface.get_rect(midright=(self.rect.right - 5, self.rect.centery))
+
         screen.blit(font_surface, font_rect)
         if self.image:
-            screen.blit(self.image, self.rect.topleft)
+            image_rect = self.image.get_rect()
+            image_rect.topleft = (self.rect.left-10, self.rect.centery - image_rect.height // 2)
+            screen.blit(self.image, image_rect)
 
     def handle_event(self, event):
         if event.type == pygame.MOUSEBUTTONDOWN:

@@ -25,46 +25,62 @@ def pebbleclick():
     print(score)
 
 def function1():
-    Miner1.power += 1
-    Miner1.amount += 1
-    Miner1.cost = round(10 * ((1.25) ** Miner1.amount))
-    print("Miner1 power:", Miner1.power)
-    print("Miner1 Amount:", Miner1.amount)
-    print("Miner1 cost:", Miner1.cost)
+    global score
+    if score >= Miner1.cost:
+        score -=  Miner1.cost
+        Miner1.power += 1
+        Miner1.amount += 1
+        Miner1.cost = round(10 * ((1.25) ** Miner1.amount))
+        print("Miner1 power:", Miner1.power)
+        print("Miner1 Amount:", Miner1.amount)
+        print("Miner1 cost:", Miner1.cost)
 
 def function2():
-    Tnt.power += 10
-    Tnt.amount += 1
-    Tnt.cost = round(100 * ((1.25) ** Tnt.amount))
-    print("TNT power:", Tnt.power)
-    print("TNT Amount:", Tnt.amount)
-    print("TNT cost:", Tnt.cost)
+    global score
+    if score >= Tnt.cost:
+        score = score - Tnt.cost
+        Tnt.power += 10
+        Tnt.amount += 1
+        Tnt.cost = round(100 * ((1.25) ** Tnt.amount))
+        print("TNT power:", Tnt.power)
+        print("TNT Amount:", Tnt.amount)
+        print("TNT cost:", Tnt.cost)
 
 def function3():
-    sDrill.power += 100
-    sDrill.amount += 1
-    sDrill.cost = round(1000 * ((1.25) ** sDrill.amount))
-    print("StoneDrill power:", sDrill.power)
-    print("StoneDrill Amount:", sDrill.amount)
-    print("StoneDrill cost:", sDrill.cost)
+    global score
+    if score >= sDrill.cost:
+        score = score - sDrill.cost
+        sDrill.power += 100
+        sDrill.amount += 1
+        sDrill.cost = round(1000 * ((1.25) ** sDrill.amount))
+        print("StoneDrill power:", sDrill.power)
+        print("StoneDrill Amount:", sDrill.amount)
+        print("StoneDrill cost:", sDrill.cost)
 
 def function4():
-    Drill.power += 1000
-    Drill.amount += 1
-    Drill.cost = round(10000 * ((1.25) ** Drill.amount))
-    print("Drill power:", Drill.power)
-    print("Drill Amount:", Drill.amount)
-    print("Drill cost:", Drill.cost)
+    global score
+    if score >= Drill.cost:
+        score -= Drill.cost
+        Drill.power += 1000
+        Drill.amount += 1
+        Drill.cost = round(10000 * ((1.25) ** Drill.amount))
+        print("Drill power:", Drill.power)
+        print("Drill Amount:", Drill.amount)
+        print("Drill cost:", Drill.cost)
 
 def function5():
-    DDrill.power += 10000
-    DDrill.amount += 1
-    DDrill.cost = round(100000 * ((1.25) ** DDrill.amount))
-    print("Drill power:", DDrill.power)
-    print("Drill Amount:", DDrill.amount)
-    print("Drill cost:", DDrill.cost)
+    global score
+    if score >= DDrill.cost:
+        score = score - Drill.cost
+        DDrill.power += 10000
+        DDrill.amount += 1
+        DDrill.cost = round(100000 * ((1.25) ** DDrill.amount))
+        print("Drill power:", DDrill.power)
+        print("Drill Amount:", DDrill.amount)
+        print("Drill cost:", DDrill.cost)
 
 def function6():
+    global score
     PDrill.power += 100000
     PDrill.amount += 1
     PDrill.cost = round(1000000 * ((1.25) ** PDrill.amount))
@@ -108,7 +124,7 @@ Ddrill = pygame.image.load("images/EthanDiamondDrill.png")
 Pdrill = pygame.image.load("images/EthanPlatinumDrill.png")
 
 pebblebutton1 = ImageButton(100, 300, pebblebutton1_image, pebbleclick)
-button1 = Button(400, 20, 200, 90, (0, 0, 255), "Miner", font, function1, MinerImage)
+button1 = Button(400, 20, 200, 90, (0, 0, 255), f"{Miner1.cost}", font, function1, MinerImage)
 button2 = Button(400, 100, 200, 90, (0, 0, 255), "TNT", font, function2, TNT)
 button3 = Button(400, 180, 200, 90, (0, 0, 255), "Stone Drill", font, function3, SDrill)
 button4 = Button(400, 260, 200, 90, (0, 0, 255), "Drill", font, function4, Idrill)
@@ -144,11 +160,22 @@ while play:
         current_time = 0
 
     pebblebutton1.draw(screen)
+    button1.text = f"Miner ({Miner1.cost})"
     button1.draw(screen)
+
+    button2.text = f"TNT ({Tnt.cost})"
     button2.draw(screen)
+
+    button3.text = f"Stone Drill ({sDrill.cost})"
     button3.draw(screen)
+
+    button4.text = f"Drill ({Drill.cost})"
     button4.draw(screen)
+
+    button5.text = f"Diamond Drill ({DDrill.cost})"
     button5.draw(screen)
+
+    button6.text = f"Platinum Drill ({PDrill.cost})"
     button6.draw(screen)
 
     screen.blit(pebblescore,(10,10))
