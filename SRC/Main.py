@@ -81,12 +81,14 @@ def function5():
 
 def function6():
     global score
-    PDrill.power += 100000
-    PDrill.amount += 1
-    PDrill.cost = round(1000000 * ((1.25) ** PDrill.amount))
-    print("Drill power:", PDrill.power)
-    print("Drill Amount:", PDrill.amount)
-    print("Drill cost:", PDrill.cost)
+    if score >= PDrill.cost:
+        score-= PDrill.cost
+        PDrill.power += 100000
+        PDrill.amount += 1
+        PDrill.cost = round(1000000 * ((1.25) ** PDrill.amount))
+        print("Drill power:", PDrill.power)
+        print("Drill Amount:", PDrill.amount)
+        print("Drill cost:", PDrill.cost)
 
 pygame.init()
 screen = pygame.display.set_mode((600, 600))
