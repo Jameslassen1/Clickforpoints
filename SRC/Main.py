@@ -4,10 +4,13 @@ from miner import Miner
 from ImageButton import ImageButton
 
 score = 0
+clickPower = 1
 Miner1 = Miner("Miner", 10, 0, 0)
 Tnt = Miner("TNT", 100, 0, 0)
 sDrill = Miner("StoneDrill", 1000, 0, 0)
 Drill = Miner("Drill", 10000, 0, 0)
+DDrill = Miner("DimondDrill", 100000, 0, 0)
+PDrill = Miner("PlatnumDrill", 1000000, 0, 0)
 
 
 play = False
@@ -18,7 +21,7 @@ timer_interval = 100
 
 def pebbleclick():
     global score
-    score += 1
+    score += clickPower
     print(score)
 
 def function1():
@@ -53,6 +56,22 @@ def function4():
     print("Drill Amount:", Drill.amount)
     print("Drill cost:", Drill.cost)
 
+def function5():
+    DDrill.power += 10000
+    DDrill.amount += 1
+    DDrill.cost = round(100000 * ((1.25) ** DDrill.amount))
+    print("Drill power:", DDrill.power)
+    print("Drill Amount:", DDrill.amount)
+    print("Drill cost:", DDrill.cost)
+
+def function6():
+    PDrill.power += 100000
+    PDrill.amount += 1
+    PDrill.cost = round(1000000 * ((1.25) ** PDrill.amount))
+    print("Drill power:", PDrill.power)
+    print("Drill Amount:", PDrill.amount)
+    print("Drill cost:", PDrill.cost)
+
 pygame.init()
 screen = pygame.display.set_mode((600, 600))
 clock = pygame.time.Clock()
@@ -83,19 +102,25 @@ while not play:
 pebblebutton1_image = pygame.image.load("images/EthanRock.png")
 MinerImage = pygame.image.load("images/EthanViking_Miner.png")
 TNT = pygame.image.load("images/EthanTNT-1.png")
+SDrill = pygame.image.load("images/EthanStoneDrill.png")
+Idrill = pygame.image.load("images/EthanDrill.png")
+Ddrill = pygame.image.load("images/EthanDiamondDrill.png")
+Pdrill = pygame.image.load("images/EthanPlatinumDrill.png")
 
 pebblebutton1 = ImageButton(100, 300, pebblebutton1_image, pebbleclick)
 button1 = Button(400, 20, 200, 90, (0, 0, 255), "Miner", font, function1, MinerImage)
-button2 = Button(400, 140, 200, 90, (0, 0, 255), "TNT", font, function2, TNT)
-button3 = Button(400, 260, 200, 90, (0, 0, 255), "Stone Drill", font, function3, TNT)
-button4 = Button(400, 380, 200, 90, (0, 0, 255), "Drill", font, function4, TNT)
+button2 = Button(400, 100, 200, 90, (0, 0, 255), "TNT", font, function2, TNT)
+button3 = Button(400, 180, 200, 90, (0, 0, 255), "Stone Drill", font, function3, SDrill)
+button4 = Button(400, 260, 200, 90, (0, 0, 255), "Drill", font, function4, Idrill)
+button5 = Button(400, 340, 200, 90, (0, 0, 255), "Drill", font, function5, Ddrill)
+button6 = Button(400, 420, 200, 90, (0, 0, 255), "Drill", font, function6, Pdrill)
 
 # Main game loop
 while play:
   
     screen.fill((255, 255, 255))
     pebblescore = font.render(f"Score: {score}", True, (0, 0, 0))
-    allminers = Miner1.power + Tnt. power + sDrill.power + Drill.power
+    allminers = Miner1.power + Tnt. power + sDrill.power + Drill.power + DDrill.power + PDrill.power
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             play = False
@@ -104,6 +129,8 @@ while play:
         button2.handle_event(event)
         button3.handle_event(event)
         button4.handle_event(event)
+        button5.handle_event(event)
+        button6.handle_event(event)
 
 
     # Check the elapsed time for the timer
@@ -121,6 +148,8 @@ while play:
     button2.draw(screen)
     button3.draw(screen)
     button4.draw(screen)
+    button5.draw(screen)
+    button6.draw(screen)
 
     screen.blit(pebblescore,(10,10))
 
