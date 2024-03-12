@@ -22,13 +22,7 @@ class Button:
         if self.image:
             screen.blit(self.image, self.rect.topleft)
 
-    def is_clicked(self, pos):
-        return self.rect.collidepoint(pos)
-
     def handle_event(self, event):
         if event.type == pygame.MOUSEBUTTONDOWN:
-            if event.button == 1:
-                pos = pygame.mouse.get_pos()
-                if self.is_clicked(pos):
-                    if self.function:
-                        self.function()
+            if self.rect.collidepoint(event.pos):
+                self.function()
