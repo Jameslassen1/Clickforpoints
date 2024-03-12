@@ -14,7 +14,7 @@ The goal of this project is to create a game with buttons in the form of celesti
 ![gameplay](https://github.com/Jameslassen1/Clickforpoints/blob/main/images/IMG_20240215_173256.jpg?raw=true)
 ![win](https://github.com/Jameslassen1/Clickforpoints/blob/main/images/IMG_20240215_173306.jpg?raw=true)
 ### Class Diagram
-![classdiagram](https://github.com/Jameslassen1/Clickforpoints/blob/main/images/Fish%20Tank%203.png)
+![classdiagram](https://github.com/Jameslassen1/Clickforpoints/blob/main/images/EthanFishtank.png?raw=true)
 ## Sprites
 #### Planet Sprite
 ![planet](https://github.com/Jameslassen1/Clickforpoints/blob/main/SRC/images/EthanPNGPlanet.png)
