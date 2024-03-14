@@ -34,4 +34,6 @@ The goal of this project is to create a game with buttons in the form of celesti
 ##### Stone Drill
 ![StoneDrill](https://github.com/Jameslassen1/Clickforpoints/blob/main/SRC/images/EthanStoneDrill.png)
 ##### Diamond Drill
-![DiamondDrill](
+![DiamondDrill](https://github.com/Jameslassen1/Clickforpoints/blob/main/SRC/images/EthanDiamondDrill.png)
+##### Platinum Drill
+![PlatinumDrill](
