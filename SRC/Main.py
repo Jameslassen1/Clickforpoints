@@ -126,12 +126,12 @@ Ddrill = pygame.image.load("images/EthanDiamondDrill.png")
 Pdrill = pygame.image.load("images/EthanPlatinumDrill.png")
 
 pebblebutton1 = ImageButton(100, 300, pebblebutton1_image, pebbleclick)
-button1 = Button(400, 20, 200, 90, (0, 0, 255), f"{Miner1.cost}", font, function1, MinerImage)
-button2 = Button(400, 100, 200, 90, (0, 0, 255), "TNT", font, function2, TNT)
-button3 = Button(400, 180, 200, 90, (0, 0, 255), "Stone Drill", font, function3, SDrill)
-button4 = Button(400, 260, 200, 90, (0, 0, 255), "Drill", font, function4, Idrill)
-button5 = Button(400, 340, 200, 90, (0, 0, 255), "Drill", font, function5, Ddrill)
-button6 = Button(400, 420, 200, 90, (0, 0, 255), "Drill", font, function6, Pdrill)
+button1 = Button(400, 20, 200, 90, (128,128,128), f"{Miner1.cost}", font, function1, MinerImage)
+button2 = Button(400, 100, 200, 90, (128,128,128), "TNT", font, function2, TNT)
+button3 = Button(400, 180, 200, 90, (128,128,128), "Stone Drill", font, function3, SDrill)
+button4 = Button(400, 260, 200, 90, (128,128,128), "Drill", font, function4, Idrill)
+button5 = Button(400, 340, 200, 90, (128,128,128), "Drill", font, function5, Ddrill)
+button6 = Button(400, 420, 200, 90, (128,128,128), "Drill", font, function6, Pdrill)
 
 # Main game loop
 while play:
