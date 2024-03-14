@@ -94,6 +94,7 @@ pygame.init()
 screen = pygame.display.set_mode((600, 600))
 clock = pygame.time.Clock()
 font = pygame.font.Font(None, 36)
+font2 = pygame.font.Font(None,20)
 
 # Main game loop
 while not play:
@@ -139,6 +140,7 @@ while play:
     screen.fill((255, 255, 255))
     pebblescore = font.render(f"Score: {score}", True, (0, 0, 0))
     allminers = Miner1.power + Tnt. power + sDrill.power + Drill.power + DDrill.power + PDrill.power
+    minerpow = font2.render(f"+{allminers}/s", True, (0, 0, 0))
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             play = False
@@ -181,6 +183,8 @@ while play:
     button6.draw(screen)
 
     screen.blit(pebblescore,(10,10))
+    screen.blit(minerpow,(10,40))
+
 
 
 
