@@ -28,7 +28,7 @@ def pebbleclick():
 def function1():
     global score
     if score >= Miner1.cost:
-        score -=  Miner1.cost
+        score -= Miner1.cost
         Miner1.power += .1
         Miner1.amount += 1
         Miner1.cost = round(10 * ((1.25) ** Miner1.amount))
@@ -137,10 +137,10 @@ button6 = Button(400, 420, 200, 90, (128,128,128), "Drill", font, function6, Pdr
 
 # Main game loop
 while play:
-  
+    score = round(score,2)
     screen.fill((255, 255, 255))
     pebblescore = font.render(f"Score: {score}", True, (0, 0, 0))
-    allminers = Miner1.power + Tnt. power + sDrill.power + Drill.power + DDrill.power + PDrill.power
+    allminers = round(Miner1.power + Tnt. power + sDrill.power + Drill.power + DDrill.power + PDrill.power,2)
     minerpow = font2.render(f"+{allminers}/s", True, (0, 0, 0))
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -160,7 +160,7 @@ while play:
     
     # Update score every second
     if current_time >= timer_interval:
-        score += allminers
+        score +=allminers
         print(f"Score: {score}")
         current_time = 0
 
