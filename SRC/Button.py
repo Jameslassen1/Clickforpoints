@@ -1,36 +1,39 @@
-class Button: 
-  xpos = 0
-  ypos = 0
-  wid = 0
-  hei = 0
-  r = 0
-  g = 0
-  b = 0
-  bLable = ""
-  def __init__(self, bLable= ''):
-    self.bLable = bLable
-    self.xpos = 0
-    self.ypos = 0
-    self.wid = 0
-    self.hei = 0
-    self.r= 0
-    self.g= 0
-    self.b= 0
+#James L
 
-  def draw(self, win, outline=None):
-    # Call this method to draw the button on the screen
-    if outline:
-        pygame.draw.rect(win, outline, (self.xpos-2, self.ypos-2, self.wid+4, self.hei+4), 0)
+import pygame
+import sys
 
-    pygame.draw.rect(win, self.bLable, (self.xpos, self.ypos, self.wid, self.hei), 0)
+class Button:
+    #setting the variable for the button position size color and word on the button
+    def __init__(self, x, y, width, height, color, text, font, function, image=None):
+        self.rect = pygame.Rect(x, y, width, height)
+        self.color = color
+        self.text = text
+        self.font = font
+        self.function = function
+        self.image = image
+        
 
-    if self.bLable != '':
-        font = pygame.font.SysFont('comicsans', 60)
-        text = font.render(self.bLable, 1, (0, 0, 0))
-        win.blit(text, (self.xpos + (self.wid/2 - text.get_width()/2), self.ypos + (self.hei/2 - text.get_height()/2)))
-      
-  def isOver(self, pos):
+    def draw(self, screen):
+        pygame.draw.rect(screen, self.color, self.rect)
 
-    if self.xpos < pos[0] < self.xpos + self.wid and self.ypos < pos[1] < self.ypos + self.hei:
-      return True
-    return False
+        max_text_width = self.rect.width * 0.8  # 80% of button width
+        font_size = self.font.size(self.text)
+        while font_size[0] > max_text_width:
+            self.font = pygame.font.Font(None, self.font.get_height() - 1)
+            font_size = self.font.size(self.text)
+
+
+        font_surface = self.font.render(self.text, True, (0, 0, 0))
+        font_rect = font_surface.get_rect(midright=(self.rect.right - 5, self.rect.centery))
+
+        screen.blit(font_surface, font_rect)
+        if self.image:
+            image_rect = self.image.get_rect()
+            image_rect.topleft = (self.rect.left-10, self.rect.centery - image_rect.height // 2)
+            screen.blit(self.image, image_rect)
+
+    def handle_event(self, event):
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            if self.rect.collidepoint(event.pos):
+                self.function()
