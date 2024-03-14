@@ -71,7 +71,7 @@ def function4():
 def function5():
     global score
     if score >= DDrill.cost:
-        score = score - Drill.cost
+        score = score - DDrill.cost
         DDrill.power += 10000
         DDrill.amount += 1
         DDrill.cost = round(100000 * ((1.25) ** DDrill.amount))
