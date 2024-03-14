@@ -28,3 +28,5 @@ The goal of this project is to create a game with buttons in the form of celesti
 ![TNT](https://github.com/Jameslassen1/Clickforpoints/blob/main/SRC/images/EthanTNT-1.png)
 #### Miner Sprite
 ![Miner](https://github.com/Jameslassen1/Clickforpoints/blob/main/SRC/images/EthanViking_Miner.png)
+#### Drill Sprites
+![Drill](https://github.com/Jameslassen1/Clickforpoints/blob/main/SRC/images/EthanDrill.png)
