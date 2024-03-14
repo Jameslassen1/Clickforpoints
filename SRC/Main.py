@@ -1,3 +1,4 @@
+#Canon Unguren, James Lassen
 import pygame
 from Button import Button
 from miner import Miner
