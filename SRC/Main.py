@@ -28,7 +28,7 @@ def function1():
     global score
     if score >= Miner1.cost:
         score -=  Miner1.cost
-        Miner1.power += 1
+        Miner1.power += .1
         Miner1.amount += 1
         Miner1.cost = round(10 * ((1.25) ** Miner1.amount))
         print("Miner1 power:", Miner1.power)
@@ -39,7 +39,7 @@ def function2():
     global score
     if score >= Tnt.cost:
         score = score - Tnt.cost
-        Tnt.power += 10
+        Tnt.power += 1
         Tnt.amount += 1
         Tnt.cost = round(100 * ((1.25) ** Tnt.amount))
         print("TNT power:", Tnt.power)
@@ -50,7 +50,7 @@ def function3():
     global score
     if score >= sDrill.cost:
         score = score - sDrill.cost
-        sDrill.power += 100
+        sDrill.power += 10
         sDrill.amount += 1
         sDrill.cost = round(1000 * ((1.25) ** sDrill.amount))
         print("StoneDrill power:", sDrill.power)
@@ -61,7 +61,7 @@ def function4():
     global score
     if score >= Drill.cost:
         score -= Drill.cost
-        Drill.power += 1000
+        Drill.power += 100
         Drill.amount += 1
         Drill.cost = round(10000 * ((1.25) ** Drill.amount))
         print("Drill power:", Drill.power)
@@ -72,7 +72,7 @@ def function5():
     global score
     if score >= DDrill.cost:
         score = score - DDrill.cost
-        DDrill.power += 10000
+        DDrill.power += 1000
         DDrill.amount += 1
         DDrill.cost = round(100000 * ((1.25) ** DDrill.amount))
         print("Drill power:", DDrill.power)
@@ -83,7 +83,7 @@ def function6():
     global score
     if score >= PDrill.cost:
         score-= PDrill.cost
-        PDrill.power += 100000
+        PDrill.power += 10000
         PDrill.amount += 1
         PDrill.cost = round(1000000 * ((1.25) ** PDrill.amount))
         print("Drill power:", PDrill.power)
