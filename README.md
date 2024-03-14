@@ -20,6 +20,8 @@ The goal of this project is to create a game with buttons in the form of celesti
 ### Gameplay
 ![gameplay](https://github.com/Jameslassen1/Clickforpoints/blob/main/images/gameplay)
 ## Sprites
+#### Rock Sprite
+![planet](https://github.com/Jameslassen1/Clickforpoints/blob/main/SRC/images/EthanRock.png)
 #### Planet Sprite
 ![planet](https://github.com/Jameslassen1/Clickforpoints/blob/main/SRC/images/EthanPNGPlanet.png)
 #### Asteroid Sprite
