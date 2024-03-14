@@ -20,6 +20,8 @@ The goal of this project is to create a game with buttons in the form of celesti
 ### Gameplay
 ![gameplay](https://github.com/Jameslassen1/Clickforpoints/blob/main/images/gameplay)
 ## Sprites
+#### Rock Sprite
+![planet](https://github.com/Jameslassen1/Clickforpoints/blob/main/SRC/images/EthanRock.png)
 #### Planet Sprite
 ![planet](https://github.com/Jameslassen1/Clickforpoints/blob/main/SRC/images/EthanPNGPlanet.png)
 #### Asteroid Sprite
@@ -28,3 +30,12 @@ The goal of this project is to create a game with buttons in the form of celesti
 ![TNT](https://github.com/Jameslassen1/Clickforpoints/blob/main/SRC/images/EthanTNT-1.png)
 #### Miner Sprite
 ![Miner](https://github.com/Jameslassen1/Clickforpoints/blob/main/SRC/images/EthanViking_Miner.png)
+#### Drill Sprites
+##### Drill
+![Drill](https://github.com/Jameslassen1/Clickforpoints/blob/main/SRC/images/EthanDrill.png)
+##### Stone Drill
+![StoneDrill](https://github.com/Jameslassen1/Clickforpoints/blob/main/SRC/images/EthanStoneDrill.png)
+##### Diamond Drill
+![DiamondDrill](https://github.com/Jameslassen1/Clickforpoints/blob/main/SRC/images/EthanDiamondDrill.png)
+##### Platinum Drill
+![PlatinumDrill](https://github.com/Jameslassen1/Clickforpoints/blob/main/SRC/images/EthanPlatinumDrill.png)
